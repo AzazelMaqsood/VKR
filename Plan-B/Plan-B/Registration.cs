@@ -25,34 +25,45 @@ namespace Plan_B
 
         private void btnReg_Click(object sender, EventArgs e)
         {
-            if (txtLogin.Text == "" || txtPass.Text == "" || txtName.Text == "" || txtF.Text == "" || txtMail.Text == "" || txtStaj.Text == "" || txtPass2.Text == "")
-                MessageBox.Show("Пожалуйста саполните все поля");
-            else if (txtPass.Text != txtPass2.Text)
-                MessageBox.Show("Пароль не совпадают");
-            else
+            try
             {
-                using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                if (txtLogin.Text == "" || txtPass.Text == "" || txtName.Text == "" || txtF.Text == "" || txtMail.Text == "" || txtStaj.Text == "" || txtPass2.Text == "")
+                    MessageBox.Show("Пожалуйста заполните все поля");
+                else if (txtPass.Text != txtPass2.Text)
+                    MessageBox.Show("Пароль не совпадают");
+                else
                 {
-                    sqlcon.Open();
-                    SqlCommand sqlCmd = new SqlCommand("SotrAdd", sqlcon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("Id_sotr", 0);
-                    sqlCmd.Parameters.AddWithValue("I_sotr", txtName.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("F_sotr", txtF.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("O_sotr", txtO.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("Mail_sotr", txtMail.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("Staj_sotr", txtStaj.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("Login_sotr", txtLogin.Text.Trim());
-                    string CPass = Bcrypt.HashPassword(txtPass.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/");
-                    sqlCmd.Parameters.AddWithValue("Password_sotr", CPass);
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Регистрация прошла успешно");
-                    Clear();
-                    Auth auth = new Auth();
-                    this.Hide();
-                    auth.Show();
+                    using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                    {
+                        sqlcon.Open();
+                        SqlCommand sqlCmd = new SqlCommand("SotrAdd", sqlcon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("Id_sotr", 0);
+                        sqlCmd.Parameters.AddWithValue("I_sotr", txtName.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("F_sotr", txtF.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("O_sotr", txtO.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("Mail_sotr", txtMail.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("Staj_sotr", txtStaj.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("Login_sotr", txtLogin.Text.Trim());
+                        string CPass = Bcrypt.HashPassword(txtPass.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/");
+                        sqlCmd.Parameters.AddWithValue("Password_sotr", CPass);
+                        sqlCmd.ExecuteNonQuery();
+                        sqlcon.Close();
+                        MessageBox.Show("Регистрация прошла успешно");
+                        Clear();
+                        Auth auth = new Auth();
+                        this.Hide();
+                        auth.Show();
+                    }
                 }
+
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         void Clear()
@@ -60,5 +71,11 @@ namespace Plan_B
             txtName.Text = txtF.Text = txtO.Text = txtMail.Text = txtStaj.Text = txtLogin.Text = txtPass.Text = txtPass2.Text = "";
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            this.Hide();
+            auth.Show();
+        }
     }
 }

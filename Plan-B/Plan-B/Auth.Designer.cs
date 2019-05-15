@@ -39,10 +39,11 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
             this.btnLogin.Location = new System.Drawing.Point(440, 198);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(138, 39);
+            this.btnLogin.Size = new System.Drawing.Size(138, 40);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -52,6 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(48, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 23);
@@ -70,6 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(48, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 23);
@@ -88,11 +91,12 @@
             // 
             // btnRegistration
             // 
-            this.btnRegistration.BackColor = System.Drawing.Color.Gold;
-            this.btnRegistration.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistration.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnRegistration.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRegistration.ForeColor = System.Drawing.SystemColors.Window;
             this.btnRegistration.Location = new System.Drawing.Point(197, 198);
             this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(201, 39);
+            this.btnRegistration.Size = new System.Drawing.Size(201, 40);
             this.btnRegistration.TabIndex = 6;
             this.btnRegistration.Text = "Регистрация";
             this.btnRegistration.UseVisualStyleBackColor = false;
@@ -102,7 +106,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 273);
+            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.ClientSize = new System.Drawing.Size(634, 264);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);

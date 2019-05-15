@@ -52,6 +52,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblName.Location = new System.Drawing.Point(49, 65);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(52, 23);
@@ -177,23 +178,28 @@
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBack.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Window;
             this.btnBack.Location = new System.Drawing.Point(264, 484);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(104, 32);
+            this.btnBack.Size = new System.Drawing.Size(104, 40);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "Назад";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnReg
             // 
-            this.btnReg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReg.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnReg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReg.ForeColor = System.Drawing.SystemColors.Window;
             this.btnReg.Location = new System.Drawing.Point(376, 484);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(268, 32);
+            this.btnReg.Size = new System.Drawing.Size(268, 40);
             this.btnReg.TabIndex = 15;
-            this.btnReg.Text = "Зарегистрировать";
-            this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.Text = "Зарегистрироваться";
+            this.btnReg.UseVisualStyleBackColor = false;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // txtPass2
@@ -219,6 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(722, 539);
             this.Controls.Add(this.txtPass2);
             this.Controls.Add(this.lblPass2);
@@ -238,11 +245,12 @@
             this.Controls.Add(this.lblO);
             this.Controls.Add(this.lblF);
             this.Controls.Add(this.lblName);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registration";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 
