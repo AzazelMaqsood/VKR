@@ -35,15 +35,17 @@
             this.lblStaj = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtF = new System.Windows.Forms.TextBox();
+            this.txtO = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtStaj = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnReg = new System.Windows.Forms.Button();
+            this.txtPass2 = new System.Windows.Forms.TextBox();
+            this.lblPass2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblName
@@ -116,61 +118,61 @@
             this.lblPass.TabIndex = 6;
             this.lblPass.Text = "Пароль";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(264, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 32);
-            this.textBox1.TabIndex = 7;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtName.Location = new System.Drawing.Point(264, 56);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(380, 32);
+            this.txtName.TabIndex = 7;
             // 
-            // textBox2
+            // txtF
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(264, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 32);
-            this.textBox2.TabIndex = 8;
+            this.txtF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtF.Location = new System.Drawing.Point(264, 118);
+            this.txtF.Name = "txtF";
+            this.txtF.Size = new System.Drawing.Size(380, 32);
+            this.txtF.TabIndex = 8;
             // 
-            // textBox3
+            // txtO
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(264, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(380, 32);
-            this.textBox3.TabIndex = 9;
+            this.txtO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtO.Location = new System.Drawing.Point(264, 168);
+            this.txtO.Name = "txtO";
+            this.txtO.Size = new System.Drawing.Size(380, 32);
+            this.txtO.TabIndex = 9;
             // 
-            // textBox4
+            // txtMail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(264, 222);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(380, 32);
-            this.textBox4.TabIndex = 10;
+            this.txtMail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtMail.Location = new System.Drawing.Point(264, 222);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(380, 32);
+            this.txtMail.TabIndex = 10;
             // 
-            // textBox5
+            // txtStaj
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(264, 273);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(380, 32);
-            this.textBox5.TabIndex = 11;
+            this.txtStaj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtStaj.Location = new System.Drawing.Point(264, 273);
+            this.txtStaj.Name = "txtStaj";
+            this.txtStaj.Size = new System.Drawing.Size(380, 32);
+            this.txtStaj.TabIndex = 11;
             // 
-            // textBox6
+            // txtLogin
             // 
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(264, 322);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(380, 32);
-            this.textBox6.TabIndex = 12;
+            this.txtLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtLogin.Location = new System.Drawing.Point(264, 322);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(380, 32);
+            this.txtLogin.TabIndex = 12;
             // 
-            // textBox7
+            // txtPass
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(264, 372);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(380, 32);
-            this.textBox7.TabIndex = 13;
+            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPass.Location = new System.Drawing.Point(264, 372);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(380, 32);
+            this.txtPass.TabIndex = 13;
             // 
             // btnBack
             // 
@@ -191,21 +193,42 @@
             this.btnReg.TabIndex = 15;
             this.btnReg.Text = "Зарегистрировать";
             this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
+            // 
+            // txtPass2
+            // 
+            this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPass2.Location = new System.Drawing.Point(264, 422);
+            this.txtPass2.Name = "txtPass2";
+            this.txtPass2.Size = new System.Drawing.Size(380, 32);
+            this.txtPass2.TabIndex = 17;
+            // 
+            // lblPass2
+            // 
+            this.lblPass2.AutoSize = true;
+            this.lblPass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPass2.Location = new System.Drawing.Point(49, 431);
+            this.lblPass2.Name = "lblPass2";
+            this.lblPass2.Size = new System.Drawing.Size(193, 23);
+            this.lblPass2.TabIndex = 16;
+            this.lblPass2.Text = "Пароль (еще раз)";
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 589);
+            this.ClientSize = new System.Drawing.Size(722, 539);
+            this.Controls.Add(this.txtPass2);
+            this.Controls.Add(this.lblPass2);
             this.Controls.Add(this.btnReg);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtStaj);
+            this.Controls.Add(this.txtMail);
+            this.Controls.Add(this.txtO);
+            this.Controls.Add(this.txtF);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblStaj);
@@ -230,14 +253,16 @@
         private System.Windows.Forms.Label lblStaj;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtF;
+        private System.Windows.Forms.TextBox txtO;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.TextBox txtStaj;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.TextBox txtPass2;
+        private System.Windows.Forms.Label lblPass2;
     }
 }
