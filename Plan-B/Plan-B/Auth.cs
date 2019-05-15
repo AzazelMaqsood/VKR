@@ -24,7 +24,8 @@ namespace Plan_B
         {
             SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;");
             sqlcon.Open();
-            string query = "SELECT * FROM Sotr WHERE Login_sotr = '" + txtLogin.Text.Trim() + "' and Password_sotr = '" + txtPassword.Text.Trim() + "'";
+            string CPass = Bcrypt.HashPassword(txtPassword.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/");
+            string query = "SELECT * FROM Sotr WHERE Login_sotr = '" + txtLogin.Text.Trim() + "' and Password_sotr = '" + CPass.Remove(50, 10) + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
  
             DataTable dtbl = new DataTable();

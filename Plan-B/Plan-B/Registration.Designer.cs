@@ -171,6 +171,7 @@
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtPass.Location = new System.Drawing.Point(264, 372);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(380, 32);
             this.txtPass.TabIndex = 13;
             // 
@@ -200,6 +201,7 @@
             this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtPass2.Location = new System.Drawing.Point(264, 422);
             this.txtPass2.Name = "txtPass2";
+            this.txtPass2.PasswordChar = '*';
             this.txtPass2.Size = new System.Drawing.Size(380, 32);
             this.txtPass2.TabIndex = 17;
             // 
@@ -236,6 +238,8 @@
             this.Controls.Add(this.lblO);
             this.Controls.Add(this.lblF);
             this.Controls.Add(this.lblName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";

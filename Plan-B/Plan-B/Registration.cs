@@ -43,7 +43,8 @@ namespace Plan_B
                     sqlCmd.Parameters.AddWithValue("Mail_sotr", txtMail.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("Staj_sotr", txtStaj.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("Login_sotr", txtLogin.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("Password_sotr", txtPass.Text.Trim());
+                    string CPass = Bcrypt.HashPassword(txtPass.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/");
+                    sqlCmd.Parameters.AddWithValue("Password_sotr", CPass);
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Регистрация прошла успешно");
                     Clear();
