@@ -122,10 +122,12 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(324, 286);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(324, 286);
             this.Name = "Auth";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Авторизация";
+            this.Text = "                      Авторизация";
             this.Load += new System.EventHandler(this.Auth_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

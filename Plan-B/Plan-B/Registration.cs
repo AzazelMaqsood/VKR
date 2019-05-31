@@ -13,7 +13,7 @@ using Bcrypt = BCrypt.Net.BCrypt;
 
 namespace Plan_B
 {
-    public partial class Registration : Form
+    public partial class Registration : MaterialSkin.Controls.MaterialForm
     {
 
         string connectionString = @"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;";
@@ -23,14 +23,26 @@ namespace Plan_B
             InitializeComponent();
         }
 
-        private void btnReg_Click(object sender, EventArgs e)
+        void Clear()
+        {
+            txtName.Text = txtF.Text = txtO.Text = txtMail.Text = txtStaj.Text = txtLogin.Text = txtPass.Text = txtPass2.Text = "";
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            this.Hide();
+            auth.Show();
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
             try
             {
                 if (txtLogin.Text == "" || txtPass.Text == "" || txtName.Text == "" || txtF.Text == "" || txtMail.Text == "" || txtStaj.Text == "" || txtPass2.Text == "")
-                    MessageBox.Show("Пожалуйста заполните все поля");
+                    MaterialMessageBox.Show("Пожалуйста заполните все поля", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
                 else if (txtPass.Text != txtPass2.Text)
-                    MessageBox.Show("Пароль не совпадают");
+                    MessageBox.Show("Пароль не совпадают", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
                 else
                 {
                     using (SqlConnection sqlcon = new SqlConnection(connectionString))
@@ -49,7 +61,7 @@ namespace Plan_B
                         sqlCmd.Parameters.AddWithValue("Password_sotr", CPass);
                         sqlCmd.ExecuteNonQuery();
                         sqlcon.Close();
-                        MessageBox.Show("Регистрация прошла успешно");
+                        MaterialMessageBox.Show("Регистрация прошла успешно", "Поздравляем", MessageBoxButtons.OK);
                         Clear();
                         Auth auth = new Auth();
                         this.Hide();
@@ -61,21 +73,13 @@ namespace Plan_B
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MaterialMessageBox.Show(ex.Message, "Что-то пошло не так", MessageBoxButtons.OK);
             }
-
         }
 
-        void Clear()
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
         {
-            txtName.Text = txtF.Text = txtO.Text = txtMail.Text = txtStaj.Text = txtLogin.Text = txtPass.Text = txtPass2.Text = "";
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Auth auth = new Auth();
-            this.Hide();
-            auth.Show();
+            Application.Exit();
         }
     }
 }

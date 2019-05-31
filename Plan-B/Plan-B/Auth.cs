@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using BCrypt.Net;
 using Bcrypt = BCrypt.Net.BCrypt;
+using MaterialSkin;
 
 namespace Plan_B
 {
@@ -26,10 +27,6 @@ namespace Plan_B
             SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Teal800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
         }
-
-
-
-
 
         private void Auth_Load(object sender, EventArgs e)
         {
@@ -55,7 +52,7 @@ namespace Plan_B
                 }
                 else
                 {
-                    MessageBox.Show("Перепроверьте введеный вами логин и пароль");
+                    MaterialMessageBox.Show("Перепроверьте введенный вами логин и пароль", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
                 }
             }
 

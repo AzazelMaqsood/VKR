@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.Id_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +39,10 @@
             this.Dolzhn_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staj_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sost_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnOtchet = new System.Windows.Forms.Button();
+            this.btnBack = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnReport = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtSearch = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.btnSearch = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +50,18 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToResizeColumns = false;
+            this.dgv.AllowUserToResizeRows = false;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_sotr,
@@ -54,11 +71,31 @@
             this.Dolzhn_sotr,
             this.Staj_sotr,
             this.Sost_sotr});
-            this.dgv.Location = new System.Drawing.Point(12, 12);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.dgv.Location = new System.Drawing.Point(12, 87);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(1087, 421);
+            this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv.Size = new System.Drawing.Size(1184, 421);
             this.dgv.TabIndex = 0;
             // 
             // Id_sotr
@@ -67,6 +104,7 @@
             this.Id_sotr.HeaderText = "Код";
             this.Id_sotr.Name = "Id_sotr";
             this.Id_sotr.ReadOnly = true;
+            this.Id_sotr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id_sotr.Width = 50;
             // 
             // Name_sotr
@@ -115,46 +153,77 @@
             this.Sost_sotr.HeaderText = "Уровень загруженности";
             this.Sost_sotr.Name = "Sost_sotr";
             this.Sost_sotr.ReadOnly = true;
-            this.Sost_sotr.Width = 120;
+            this.Sost_sotr.Width = 200;
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(942, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 70);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Depth = 0;
+            this.btnBack.Location = new System.Drawing.Point(881, 532);
+            this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Primary = true;
+            this.btnBack.Size = new System.Drawing.Size(240, 40);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Назад";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnOtchet
+            // btnReport
             // 
-            this.btnOtchet.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnOtchet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOtchet.Location = new System.Drawing.Point(12, 439);
-            this.btnOtchet.Name = "btnOtchet";
-            this.btnOtchet.Size = new System.Drawing.Size(256, 70);
-            this.btnOtchet.TabIndex = 2;
-            this.btnOtchet.Text = "Сформировать отчет";
-            this.btnOtchet.UseVisualStyleBackColor = false;
-            this.btnOtchet.Click += new System.EventHandler(this.btnOtchet_Click);
+            this.btnReport.Depth = 0;
+            this.btnReport.Location = new System.Drawing.Point(12, 532);
+            this.btnReport.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Primary = true;
+            this.btnReport.Size = new System.Drawing.Size(240, 40);
+            this.btnReport.TabIndex = 12;
+            this.btnReport.Text = "Сформировать отчет";
+            this.btnReport.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Depth = 0;
+            this.txtSearch.Hint = "Введите имя сотрудника";
+            this.txtSearch.Location = new System.Drawing.Point(279, 544);
+            this.txtSearch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.Size = new System.Drawing.Size(344, 28);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.UseSystemPasswordChar = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Depth = 0;
+            this.btnSearch.Location = new System.Drawing.Point(594, 532);
+            this.btnSearch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Primary = true;
+            this.btnSearch.Size = new System.Drawing.Size(258, 40);
+            this.btnSearch.TabIndex = 14;
+            this.btnSearch.Text = "Поиск";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(1111, 514);
-            this.Controls.Add(this.btnOtchet);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1183, 592);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgv);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Страница администратора";
+            this.Text = "Мониторинг загруженности";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
@@ -163,7 +232,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Button button1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnBack;
+        private MaterialSkin.Controls.MaterialRaisedButton btnReport;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtSearch;
+        private MaterialSkin.Controls.MaterialRaisedButton btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn F_sotr;
@@ -171,6 +243,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Dolzhn_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Staj_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sost_sotr;
-        private System.Windows.Forms.Button btnOtchet;
     }
 }
