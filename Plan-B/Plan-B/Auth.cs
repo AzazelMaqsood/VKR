@@ -13,16 +13,30 @@ using Bcrypt = BCrypt.Net.BCrypt;
 
 namespace Plan_B
 {
-    public partial class Auth : Form
+    public partial class Auth : MaterialSkin.Controls.MaterialForm
     {
         SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;");
 
         public Auth()
         {
             InitializeComponent();
+            //Кастоматизация дизайна при помощи MaterialSkin.dll
+            MaterialSkin.MaterialSkinManager SkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            SkinManager.AddFormToManage(this);
+            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Teal800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+
+
+
+
+        private void Auth_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -55,7 +69,6 @@ namespace Plan_B
             }
         }
 
-
         private void btnRegistration_Click(object sender, EventArgs e)
         {
             sqlcon.Close();
@@ -63,5 +76,8 @@ namespace Plan_B
             rg.Show();
             this.Hide();
         }
+
+
     }
 }
+

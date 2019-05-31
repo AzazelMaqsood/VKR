@@ -28,109 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnRegistration = new System.Windows.Forms.Button();
+            this.txtPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.btnRegistration = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.btnLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLogin.Location = new System.Drawing.Point(440, 198);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(138, 40);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Войти";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(48, 59);
+            this.label1.Location = new System.Drawing.Point(41, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 23);
+            this.label1.Size = new System.Drawing.Size(0, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Логин";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(197, 52);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(381, 32);
-            this.txtLogin.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(48, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Пароль";
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(197, 122);
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPassword.Hint = "Логин";
+            this.txtPassword.Location = new System.Drawing.Point(34, 124);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(381, 32);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.Size = new System.Drawing.Size(258, 28);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.UseSystemPasswordChar = false;
             // 
             // btnRegistration
             // 
-            this.btnRegistration.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnRegistration.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRegistration.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRegistration.Location = new System.Drawing.Point(197, 198);
+            this.btnRegistration.Depth = 0;
+            this.btnRegistration.Location = new System.Drawing.Point(34, 223);
+            this.btnRegistration.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(201, 40);
-            this.btnRegistration.TabIndex = 6;
+            this.btnRegistration.Primary = true;
+            this.btnRegistration.Size = new System.Drawing.Size(258, 40);
+            this.btnRegistration.TabIndex = 8;
             this.btnRegistration.Text = "Регистрация";
-            this.btnRegistration.UseVisualStyleBackColor = false;
+            this.btnRegistration.UseVisualStyleBackColor = true;
             this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLogin.Depth = 0;
+            this.txtLogin.Font = new System.Drawing.Font("Comfortaa", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Hint = "Пароль";
+            this.txtLogin.Location = new System.Drawing.Point(34, 88);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.PasswordChar = '*';
+            this.txtLogin.SelectedText = "";
+            this.txtLogin.SelectionLength = 0;
+            this.txtLogin.SelectionStart = 0;
+            this.txtLogin.Size = new System.Drawing.Size(258, 28);
+            this.txtLogin.TabIndex = 9;
+            this.txtLogin.UseSystemPasswordChar = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Depth = 0;
+            this.btnLogin.Location = new System.Drawing.Point(34, 177);
+            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Primary = true;
+            this.btnLogin.Size = new System.Drawing.Size(258, 40);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.Text = "Войти";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // Auth
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(634, 264);
+            this.ClientSize = new System.Drawing.Size(324, 286);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLogin);
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Auth";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.Auth_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnRegistration;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPassword;
+        private MaterialSkin.Controls.MaterialRaisedButton btnRegistration;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtLogin;
+        private MaterialSkin.Controls.MaterialRaisedButton btnLogin;
     }
 }
