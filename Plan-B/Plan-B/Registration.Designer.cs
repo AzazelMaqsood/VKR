@@ -51,7 +51,7 @@
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.btnBack.Click += new System.EventHandler(this.MaterialRaisedButton1_Click);
             // 
             // materialRaisedButton2
             // 
@@ -64,7 +64,7 @@
             this.materialRaisedButton2.TabIndex = 19;
             this.materialRaisedButton2.Text = "Регистрация";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            this.materialRaisedButton2.Click += new System.EventHandler(this.MaterialRaisedButton2_Click);
             // 
             // txtName
             // 

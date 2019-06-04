@@ -51,12 +51,12 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtPassword.Depth = 0;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPassword.Hint = "Логин";
+            this.txtPassword.Hint = "Пароль";
             this.txtPassword.Location = new System.Drawing.Point(34, 124);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
@@ -75,19 +75,19 @@
             this.btnRegistration.TabIndex = 8;
             this.btnRegistration.Text = "Регистрация";
             this.btnRegistration.UseVisualStyleBackColor = true;
-            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
+            this.btnRegistration.Click += new System.EventHandler(this.BtnRegistration_Click);
             // 
             // txtLogin
             // 
             this.txtLogin.BackColor = System.Drawing.SystemColors.Control;
             this.txtLogin.Depth = 0;
             this.txtLogin.Font = new System.Drawing.Font("Comfortaa", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Hint = "Пароль";
+            this.txtLogin.Hint = "Логин";
             this.txtLogin.Location = new System.Drawing.Point(34, 88);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.PasswordChar = '*';
+            this.txtLogin.PasswordChar = '\0';
             this.txtLogin.SelectedText = "";
             this.txtLogin.SelectionLength = 0;
             this.txtLogin.SelectionStart = 0;
@@ -106,7 +106,7 @@
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click_1);
             // 
             // Auth
             // 
@@ -128,6 +128,7 @@
             this.Name = "Auth";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "                      Авторизация";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Auth_FormClosed);
             this.Load += new System.EventHandler(this.Auth_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

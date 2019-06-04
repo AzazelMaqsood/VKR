@@ -16,7 +16,7 @@ namespace Plan_B
     public partial class Registration : MaterialSkin.Controls.MaterialForm
     {
 
-        string connectionString = @"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;";
+        string connectionString = @"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=Profinteres;" + "Integrated Security=true;";
 
         public Registration()
         {
@@ -28,21 +28,21 @@ namespace Plan_B
             txtName.Text = txtF.Text = txtO.Text = txtMail.Text = txtStaj.Text = txtLogin.Text = txtPass.Text = txtPass2.Text = "";
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void MaterialRaisedButton1_Click(object sender, EventArgs e)
         {
             Auth auth = new Auth();
             this.Hide();
             auth.Show();
         }
 
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        private void MaterialRaisedButton2_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtLogin.Text == "" || txtPass.Text == "" || txtName.Text == "" || txtF.Text == "" || txtMail.Text == "" || txtStaj.Text == "" || txtPass2.Text == "")
+                if (txtLogin.Text == "" || txtPass.Text == "" || txtName.Text == "" || txtF.Text == "" || txtMail.Text == "" ||  txtPass2.Text == "")
                     MaterialMessageBox.Show("Пожалуйста заполните все поля", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
                 else if (txtPass.Text != txtPass2.Text)
-                    MessageBox.Show("Пароль не совпадают", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
+                    MaterialMessageBox.Show("Пароль не совпадают", "Упс... Что-то пошло не так", MessageBoxButtons.OK);
                 else
                 {
                     using (SqlConnection sqlcon = new SqlConnection(connectionString))
@@ -51,6 +51,7 @@ namespace Plan_B
                         SqlCommand sqlCmd = new SqlCommand("SotrAdd", sqlcon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         sqlCmd.Parameters.AddWithValue("Id_sotr", 0);
+                        sqlCmd.Parameters.AddWithValue("Sost_sotr", "");
                         sqlCmd.Parameters.AddWithValue("I_sotr", txtName.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("F_sotr", txtF.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("O_sotr", txtO.Text.Trim());

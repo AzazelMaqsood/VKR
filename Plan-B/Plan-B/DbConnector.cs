@@ -11,7 +11,7 @@ namespace Plan_B
 {
     class DbConnector
     {
-        static string connectionString = @"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;";
+        static string connectionString = @"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=Profinteres;" + "Integrated Security=true;";
         private SqlConnection sqlcon = new SqlConnection(connectionString);
 
         public void ExecCommand(string execCom)

@@ -13,6 +13,10 @@ namespace Plan_B
 {
     public partial class Admin : MaterialSkin.Controls.MaterialForm
     {
+
+        string IdCurSotr;
+        
+
         public Admin()
         {
             InitializeComponent();
@@ -28,35 +32,67 @@ namespace Plan_B
         private void LoadData()
         {
             DbConnector dbConnector = new DbConnector();
-
-
             DataTable dtbl = new DataTable();
-            dtbl = dbConnector.GetTable("SELECT Id_sotr, I_sotr, F_sotr, O_sotr, Staj_sotr, Name_dolzhn, Sost_sotr from Sotr, Dolzhn, Postavl_zadachi where Id_sotr = Id_dolzhn ");
+            dtbl = dbConnector.GetTable("SELECT Id_sotr, I_sotr, F_sotr, O_sotr, Staj_sotr, Name_dolzhn, Sost_sotr from Sotr full outer join Dolzhn on Sotr_ID = Id_sotr where Id_sotr != 1");
             dgv.DataSource = dtbl;
         }
 
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
+            //Возврат в главное меню
             Main main = new Main();
             main.Show();
             this.Hide();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+
+        private void BtnSearch_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgv.RowCount; i++)
+            //Проверка пустоты 
+            if (txtSearch.Text == "")
             {
-                dgv.Rows[i].Selected = false;
-                for (int j = 0; j < dgv.ColumnCount; j++)
-                    if (dgv.Rows[i].Cells[j].Value != null)
-                        if (dgv.Rows[i].Cells[j].Value.ToString().Contains(txtSearch.Text))
-                        {
-                            dgv.Rows[i].Selected = true;
-                            break;
-                        }
+                MaterialMessageBox.Show("Укажите параметр для поиска", "Упс... Кажется что-то забыли", MessageBoxButtons.OK);
             }
+            else
+            {
+                //Используем флаг для выхода из вложенного массива
+                var flag = true;
+                //Выбор строк содержащих параметр поиска
+                for (int i = 0; i < dgv.RowCount; i++)
+                {
+                    dgv.Rows[i].Selected = false;
+                    for (int j = 0; flag && j < dgv.ColumnCount; j++)
+                        if (dgv.Rows[i].Cells[j].Value != null)
+                        {
+                            if (dgv.Rows[i].Cells[j].Value.ToString().Contains(txtSearch.Text))
+                            {
+                                dgv.Rows[i].Selected = true;
+                                break;
+                            }
+                            else
+                            {
+                                MaterialMessageBox.Show("Ничего не найдено", "Уведомление", MessageBoxButtons.OK);
+                                flag = false;
+                                break;
+                            }
+                        }
+                }
+            }
+
         }
-    
+
+        private void BtnNaznachDolzhn_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string IdCurSotr = dgv.CurrentRow.Cells[1].Value.ToString();
+            txtSearch.Text = IdCurSotr;
+
+        }
     }
 }

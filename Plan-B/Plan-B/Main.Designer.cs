@@ -28,141 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.BtnMonitoring = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BtnZadachi = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BtnSotr = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BtnAbout = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // chart1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(270, 454);
-            this.flowLayoutPanel1.TabIndex = 0;
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
+            this.chart1.Location = new System.Drawing.Point(359, 159);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Имя";
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Кол-во задач";
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
+            this.chart1.Size = new System.Drawing.Size(600, 300);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title7.Name = "Name";
+            this.chart1.Titles.Add(title7);
             // 
-            // pictureBox1
+            // BtnMonitoring
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(386, 160);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.BtnMonitoring.Depth = 0;
+            this.BtnMonitoring.Location = new System.Drawing.Point(12, 159);
+            this.BtnMonitoring.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnMonitoring.Name = "BtnMonitoring";
+            this.BtnMonitoring.Primary = true;
+            this.BtnMonitoring.Size = new System.Drawing.Size(263, 51);
+            this.BtnMonitoring.TabIndex = 1;
+            this.BtnMonitoring.Text = "Мониторинг";
+            this.BtnMonitoring.UseVisualStyleBackColor = true;
+            this.BtnMonitoring.Click += new System.EventHandler(this.BtnMonitoring_Click);
             // 
-            // panel1
+            // BtnZadachi
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 33);
-            this.panel1.TabIndex = 7;
+            this.BtnZadachi.Depth = 0;
+            this.BtnZadachi.Location = new System.Drawing.Point(12, 242);
+            this.BtnZadachi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnZadachi.Name = "BtnZadachi";
+            this.BtnZadachi.Primary = true;
+            this.BtnZadachi.Size = new System.Drawing.Size(263, 51);
+            this.BtnZadachi.TabIndex = 2;
+            this.BtnZadachi.Text = "Назначение задач";
+            this.BtnZadachi.UseVisualStyleBackColor = true;
+            this.BtnZadachi.Click += new System.EventHandler(this.BtnZadachi_Click);
             // 
-            // button1
+            // BtnSotr
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(3, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(260, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Администратору";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnSotr.Depth = 0;
+            this.BtnSotr.Location = new System.Drawing.Point(12, 325);
+            this.BtnSotr.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnSotr.Name = "BtnSotr";
+            this.BtnSotr.Primary = true;
+            this.BtnSotr.Size = new System.Drawing.Size(263, 51);
+            this.BtnSotr.TabIndex = 3;
+            this.BtnSotr.Text = "Сотруднику";
+            this.BtnSotr.UseVisualStyleBackColor = true;
+            this.BtnSotr.Click += new System.EventHandler(this.BtnSotr_Click);
             // 
-            // button2
+            // BtnAbout
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(3, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Сотруднику";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnAbout.Depth = 0;
+            this.BtnAbout.Location = new System.Drawing.Point(12, 408);
+            this.BtnAbout.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnAbout.Name = "BtnAbout";
+            this.BtnAbout.Primary = true;
+            this.BtnAbout.Size = new System.Drawing.Size(263, 51);
+            this.BtnAbout.TabIndex = 4;
+            this.BtnAbout.Text = "О программе";
+            this.BtnAbout.UseVisualStyleBackColor = true;
+            this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
-            // button4
+            // materialLabel1
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Location = new System.Drawing.Point(3, 174);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(260, 60);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Задачи";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SeaGreen;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Info;
-            this.button5.Location = new System.Drawing.Point(3, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(260, 60);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "О нас";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Info;
-            this.button3.Location = new System.Drawing.Point(3, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(260, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Выйти";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.White;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(474, 108);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(252, 24);
+            this.materialLabel1.TabIndex = 5;
+            this.materialLabel1.Text = "Мониторинг успеваемости";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(971, 516);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(971, 506);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.BtnAbout);
+            this.Controls.Add(this.BtnSotr);
+            this.Controls.Add(this.BtnZadachi);
+            this.Controls.Add(this.BtnMonitoring);
+            this.Controls.Add(this.chart1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(971, 506);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(971, 506);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnMonitoring;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnZadachi;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnSotr;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnAbout;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

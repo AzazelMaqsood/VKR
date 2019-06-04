@@ -16,7 +16,7 @@ namespace Plan_B
 {
     public partial class Auth : MaterialSkin.Controls.MaterialForm
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=PROFINTERES;" + "Integrated Security=true;");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-6GTJNQE\SQLEXPRESS;Initial Catalog=Profinteres;" + "Integrated Security=true;");
 
         public Auth()
         {
@@ -33,7 +33,7 @@ namespace Plan_B
             
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void BtnLogin_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -46,6 +46,10 @@ namespace Plan_B
                 sda.Fill(dtbl);
                 if (dtbl.Rows.Count == 1)
                 {
+                    //TakeLog takeLog = new TakeLog();
+                    //takeLog.takeLogin(txtLogin.Text.Trim());
+
+                    Program.IsAdmin = txtLogin.Text.Trim();
                     Main main = new Main();
                     this.Hide();
                     main.Show();
@@ -66,7 +70,7 @@ namespace Plan_B
             }
         }
 
-        private void btnRegistration_Click(object sender, EventArgs e)
+        private void BtnRegistration_Click(object sender, EventArgs e)
         {
             sqlcon.Close();
             Registration rg = new Registration();
@@ -74,7 +78,10 @@ namespace Plan_B
             this.Hide();
         }
 
-
+        private void Auth_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

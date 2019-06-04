@@ -39,10 +39,11 @@
             this.Dolzhn_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staj_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sost_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBack = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnReport = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BtnBack = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtSearch = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnSearch = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.TxtNaznachDolzhn = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BtnNaznachDolzhn = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,8 +96,9 @@
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv.Size = new System.Drawing.Size(1184, 421);
+            this.dgv.Size = new System.Drawing.Size(1052, 421);
             this.dgv.TabIndex = 0;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // Id_sotr
             // 
@@ -105,6 +107,7 @@
             this.Id_sotr.Name = "Id_sotr";
             this.Id_sotr.ReadOnly = true;
             this.Id_sotr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id_sotr.Visible = false;
             this.Id_sotr.Width = 50;
             // 
             // Name_sotr
@@ -153,32 +156,20 @@
             this.Sost_sotr.HeaderText = "Уровень загруженности";
             this.Sost_sotr.Name = "Sost_sotr";
             this.Sost_sotr.ReadOnly = true;
-            this.Sost_sotr.Width = 200;
+            this.Sost_sotr.Width = 150;
             // 
-            // btnBack
+            // BtnBack
             // 
-            this.btnBack.Depth = 0;
-            this.btnBack.Location = new System.Drawing.Point(881, 532);
-            this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Primary = true;
-            this.btnBack.Size = new System.Drawing.Size(240, 40);
-            this.btnBack.TabIndex = 11;
-            this.btnBack.Text = "Назад";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.Depth = 0;
-            this.btnReport.Location = new System.Drawing.Point(12, 532);
-            this.btnReport.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Primary = true;
-            this.btnReport.Size = new System.Drawing.Size(240, 40);
-            this.btnReport.TabIndex = 12;
-            this.btnReport.Text = "Сформировать отчет";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.BtnBack.Depth = 0;
+            this.BtnBack.Location = new System.Drawing.Point(1070, 532);
+            this.BtnBack.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Primary = true;
+            this.BtnBack.Size = new System.Drawing.Size(240, 40);
+            this.BtnBack.TabIndex = 11;
+            this.BtnBack.Text = "Назад";
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // txtSearch
             // 
@@ -206,21 +197,52 @@
             this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Поиск";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // TxtNaznachDolzhn
+            // 
+            this.TxtNaznachDolzhn.Depth = 0;
+            this.TxtNaznachDolzhn.Hint = "Укажите должность";
+            this.TxtNaznachDolzhn.Location = new System.Drawing.Point(1070, 107);
+            this.TxtNaznachDolzhn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtNaznachDolzhn.Name = "TxtNaznachDolzhn";
+            this.TxtNaznachDolzhn.PasswordChar = '\0';
+            this.TxtNaznachDolzhn.SelectedText = "";
+            this.TxtNaznachDolzhn.SelectionLength = 0;
+            this.TxtNaznachDolzhn.SelectionStart = 0;
+            this.TxtNaznachDolzhn.Size = new System.Drawing.Size(344, 28);
+            this.TxtNaznachDolzhn.TabIndex = 15;
+            this.TxtNaznachDolzhn.UseSystemPasswordChar = false;
+            // 
+            // BtnNaznachDolzhn
+            // 
+            this.BtnNaznachDolzhn.Depth = 0;
+            this.BtnNaznachDolzhn.Location = new System.Drawing.Point(1070, 170);
+            this.BtnNaznachDolzhn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnNaznachDolzhn.Name = "BtnNaznachDolzhn";
+            this.BtnNaznachDolzhn.Primary = true;
+            this.BtnNaznachDolzhn.Size = new System.Drawing.Size(240, 40);
+            this.BtnNaznachDolzhn.TabIndex = 16;
+            this.BtnNaznachDolzhn.Text = "Назначить";
+            this.BtnNaznachDolzhn.UseVisualStyleBackColor = true;
+            this.BtnNaznachDolzhn.Click += new System.EventHandler(this.BtnNaznachDolzhn_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1183, 592);
+            this.ClientSize = new System.Drawing.Size(1366, 603);
+            this.Controls.Add(this.BtnNaznachDolzhn);
+            this.Controls.Add(this.TxtNaznachDolzhn);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.dgv);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1366, 603);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1366, 603);
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мониторинг загруженности";
@@ -232,10 +254,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv;
-        private MaterialSkin.Controls.MaterialRaisedButton btnBack;
-        private MaterialSkin.Controls.MaterialRaisedButton btnReport;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnBack;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSearch;
         private MaterialSkin.Controls.MaterialRaisedButton btnSearch;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtNaznachDolzhn;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnNaznachDolzhn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name_sotr;
         private System.Windows.Forms.DataGridViewTextBoxColumn F_sotr;
