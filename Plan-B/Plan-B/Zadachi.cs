@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -31,7 +25,7 @@ namespace Plan_B
             DataTable dtbl = new DataTable();
             dtbl = dbConnector.GetTable("SELECT Id_sotr, I_sotr, F_sotr, O_sotr, Staj_sotr, Name_dolzhn from Sotr INNER JOIN Dolzhn on Id_sotr  = Sotr_ID FULL OUTER JOIN Postavl_zadachi on Id_sotr = Postavl_zadachi.Sotr_ID");
             //dtbl = dbConnector.GetTable("SELECT Id_sotr, I_sotr, F_sotr, O_sotr, Staj_sotr, Name_dolzhn, Sost_sotrud from Sotr, Dolzhn, Postavl_zadachi");
-            DGV1.DataSource = dtbl;
+            dgv.DataSource = dtbl;
             DataTable dtbl2 = new DataTable();
             //dtbl2 = dbConnector.GetTable("SELECT Id_postavl_zadachi, Name_zadacha, Opis_zadacha, Name_resourse, Data_naznach, Data_vipoln, Status_vipoln from Zadacha, Dolzhn, Postavl_zadachi, Resourse where Id_zadacha = Id_postavl_zadachi ");
             dtbl2 = dbConnector.GetTable("SELECT Id_postavl_zadachi, Name_zadacha, Opis_zadacha, Name_resourse, Data_naznach, Data_vipoln, Status_vipoln from Postavl_zadachi INNER JOIN Zadacha on Id_zadacha = Zadacha_ID INNER JOIN Resourse on Id_resourse = Resourse_ID");
@@ -56,8 +50,8 @@ namespace Plan_B
 
         private void DGV1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string CurSotr = DGV1.CurrentRow.Cells[0].Value.ToString();
-            TxtNameSotr.Text = DGV1.CurrentRow.Cells[1].Value.ToString();
+            string CurSotr = dgv.CurrentRow.Cells["Id_sotr"].Value.ToString();
+            TxtNameSotr.Text = dgv.CurrentRow.Cells[1].Value.ToString();
             TxtIdSotr.Text = CurSotr;
             DbConnector dbConnector = new DbConnector();
             DataTable dtbl = new DataTable();
@@ -73,7 +67,8 @@ namespace Plan_B
             {
                 if (TxtNameResourse.Text == "" || TxtNameSotr.Text == "" || TxtOpisZadacha.Text == "" || TxtIdSotr.Text == "" || TxtNameZadacha.Text == "")
                 {
-                    MaterialMessageBox.Show("Пожалуйста заполните информацию о задачах и ресурсах", "Упс...Что-то пропустили", MessageBoxButtons.OK);
+                    string CurDate = DateTime.Now.ToLongDateString();
+                    MaterialMessageBox.Show(CurDate, "Упс...Что-то пропустили", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -125,7 +120,7 @@ namespace Plan_B
             DbConnector dbConnector = new DbConnector();
             DataTable dtbl = new DataTable();
             dtbl = dbConnector.GetTable("SELECT Id_sotr, I_sotr, F_sotr, O_sotr, Staj_sotr, Name_dolzhn from Sotr INNER JOIN Dolzhn on Id_sotr  = Sotr_ID FULL OUTER JOIN Postavl_zadachi on Id_sotr = Postavl_zadachi.Sotr_ID");
-            DGV1.DataSource = dtbl;
+            dgv.DataSource = dtbl;
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -134,7 +129,6 @@ namespace Plan_B
             this.Hide();
             main.Show();
         }
-
 
     }
 }

@@ -28,22 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.DGV1 = new System.Windows.Forms.DataGridView();
-            this.Id_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.F_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.O_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dolzhn_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staj_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGV2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_postavl_zadachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +47,6 @@
             this.TxtNameResourse = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TxtNameSotr = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.BtnAdd = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnUpdate = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnDel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnFreeSotr = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnAllSotr = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -63,110 +55,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtIdSotr = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.BtnBack = new MaterialSkin.Controls.MaterialRaisedButton();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.Id_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.F_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.O_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dolzhn_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staj_sotr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DGV1
-            // 
-            this.DGV1.AllowUserToAddRows = false;
-            this.DGV1.AllowUserToDeleteRows = false;
-            this.DGV1.AllowUserToResizeColumns = false;
-            this.DGV1.AllowUserToResizeRows = false;
-            this.DGV1.BackgroundColor = System.Drawing.Color.White;
-            this.DGV1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_sotr,
-            this.F_sotr,
-            this.Name_sotr,
-            this.O_sotr,
-            this.Dolzhn_sotr,
-            this.Staj_sotr});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DGV1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.DGV1.Location = new System.Drawing.Point(37, 131);
-            this.DGV1.Name = "DGV1";
-            this.DGV1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV1.RowHeadersVisible = false;
-            this.DGV1.RowTemplate.Height = 24;
-            this.DGV1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGV1.Size = new System.Drawing.Size(991, 239);
-            this.DGV1.TabIndex = 17;
-            this.DGV1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV1_CellClick);
-            // 
-            // Id_sotr
-            // 
-            this.Id_sotr.DataPropertyName = "Id_sotr";
-            this.Id_sotr.HeaderText = "Код";
-            this.Id_sotr.Name = "Id_sotr";
-            this.Id_sotr.ReadOnly = true;
-            this.Id_sotr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id_sotr.Width = 50;
-            // 
-            // F_sotr
-            // 
-            this.F_sotr.DataPropertyName = "F_sotr";
-            this.F_sotr.HeaderText = "Фамилия";
-            this.F_sotr.Name = "F_sotr";
-            this.F_sotr.ReadOnly = true;
-            this.F_sotr.Width = 130;
-            // 
-            // Name_sotr
-            // 
-            this.Name_sotr.DataPropertyName = "I_sotr";
-            this.Name_sotr.HeaderText = "Имя";
-            this.Name_sotr.Name = "Name_sotr";
-            this.Name_sotr.ReadOnly = true;
-            this.Name_sotr.Width = 130;
-            // 
-            // O_sotr
-            // 
-            this.O_sotr.DataPropertyName = "O_sotr";
-            this.O_sotr.HeaderText = "Отчество";
-            this.O_sotr.Name = "O_sotr";
-            this.O_sotr.ReadOnly = true;
-            this.O_sotr.Width = 130;
-            // 
-            // Dolzhn_sotr
-            // 
-            this.Dolzhn_sotr.DataPropertyName = "Name_dolzhn";
-            this.Dolzhn_sotr.HeaderText = "Должность";
-            this.Dolzhn_sotr.Name = "Dolzhn_sotr";
-            this.Dolzhn_sotr.ReadOnly = true;
-            this.Dolzhn_sotr.Width = 150;
-            // 
-            // Staj_sotr
-            // 
-            this.Staj_sotr.DataPropertyName = "Staj_sotr";
-            this.Staj_sotr.HeaderText = "Стаж";
-            this.Staj_sotr.Name = "Staj_sotr";
-            this.Staj_sotr.ReadOnly = true;
-            this.Staj_sotr.Width = 150;
             // 
             // DGV2
             // 
@@ -177,59 +76,50 @@
             this.DGV2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV2.BackgroundColor = System.Drawing.Color.White;
             this.DGV2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.Id_postavl_zadachi,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV2.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGV2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DGV2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.DGV2.Location = new System.Drawing.Point(37, 433);
             this.DGV2.Name = "DGV2";
             this.DGV2.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV2.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGV2.RowHeadersVisible = false;
             this.DGV2.RowTemplate.Height = 24;
             this.DGV2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DGV2.Size = new System.Drawing.Size(1292, 210);
+            this.DGV2.Size = new System.Drawing.Size(1029, 210);
             this.DGV2.TabIndex = 18;
             this.DGV2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV2_CellClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id_postavl_zadachi";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -238,6 +128,13 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // Id_postavl_zadachi
+            // 
+            this.Id_postavl_zadachi.HeaderText = "Код поставленной задачи";
+            this.Id_postavl_zadachi.Name = "Id_postavl_zadachi";
+            this.Id_postavl_zadachi.ReadOnly = true;
+            this.Id_postavl_zadachi.Visible = false;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -347,18 +244,6 @@
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.Depth = 0;
-            this.BtnUpdate.Location = new System.Drawing.Point(1159, 798);
-            this.BtnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Primary = true;
-            this.BtnUpdate.Size = new System.Drawing.Size(170, 35);
-            this.BtnUpdate.TabIndex = 25;
-            this.BtnUpdate.Text = "Обновить";
-            this.BtnUpdate.UseVisualStyleBackColor = true;
-            // 
             // BtnDel
             // 
             this.BtnDel.Depth = 0;
@@ -457,12 +342,126 @@
             this.BtnBack.UseVisualStyleBackColor = true;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToResizeColumns = false;
+            this.dgv.AllowUserToResizeRows = false;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_sotr,
+            this.Name_sotr,
+            this.F_sotr,
+            this.O_sotr,
+            this.Dolzhn_sotr,
+            this.Staj_sotr});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("PT Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.dgv.Location = new System.Drawing.Point(37, 131);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv.Size = new System.Drawing.Size(918, 221);
+            this.dgv.TabIndex = 35;
+            // 
+            // Id_sotr
+            // 
+            this.Id_sotr.DataPropertyName = "Id_sotr";
+            this.Id_sotr.HeaderText = "Код";
+            this.Id_sotr.Name = "Id_sotr";
+            this.Id_sotr.ReadOnly = true;
+            this.Id_sotr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id_sotr.Visible = false;
+            this.Id_sotr.Width = 50;
+            // 
+            // Name_sotr
+            // 
+            this.Name_sotr.DataPropertyName = "I_sotr";
+            this.Name_sotr.HeaderText = "Имя";
+            this.Name_sotr.Name = "Name_sotr";
+            this.Name_sotr.ReadOnly = true;
+            this.Name_sotr.Width = 120;
+            // 
+            // F_sotr
+            // 
+            this.F_sotr.DataPropertyName = "F_sotr";
+            this.F_sotr.HeaderText = "Фамилия";
+            this.F_sotr.Name = "F_sotr";
+            this.F_sotr.ReadOnly = true;
+            this.F_sotr.Width = 120;
+            // 
+            // O_sotr
+            // 
+            this.O_sotr.DataPropertyName = "O_sotr";
+            this.O_sotr.HeaderText = "Отчество";
+            this.O_sotr.Name = "O_sotr";
+            this.O_sotr.ReadOnly = true;
+            this.O_sotr.Width = 130;
+            // 
+            // Dolzhn_sotr
+            // 
+            this.Dolzhn_sotr.DataPropertyName = "Name_dolzhn";
+            this.Dolzhn_sotr.HeaderText = "Должность";
+            this.Dolzhn_sotr.Name = "Dolzhn_sotr";
+            this.Dolzhn_sotr.ReadOnly = true;
+            this.Dolzhn_sotr.Width = 130;
+            // 
+            // Staj_sotr
+            // 
+            this.Staj_sotr.DataPropertyName = "Staj_sotr";
+            this.Staj_sotr.HeaderText = "Стаж";
+            this.Staj_sotr.Name = "Staj_sotr";
+            this.Staj_sotr.ReadOnly = true;
+            this.Staj_sotr.Width = 120;
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(37, 669);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1290, 1);
+            this.materialDivider2.TabIndex = 36;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
             // Zadachi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 892);
+            this.Controls.Add(this.materialDivider2);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.TxtIdSotr);
             this.Controls.Add(this.label2);
@@ -471,14 +470,12 @@
             this.Controls.Add(this.BtnAllSotr);
             this.Controls.Add(this.BtnFreeSotr);
             this.Controls.Add(this.BtnDel);
-            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.TxtNameSotr);
             this.Controls.Add(this.TxtNameResourse);
             this.Controls.Add(this.TxtNameZadacha);
             this.Controls.Add(this.TxtOpisZadacha);
             this.Controls.Add(this.DGV2);
-            this.Controls.Add(this.DGV1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1366, 892);
             this.MinimizeBox = false;
@@ -486,42 +483,42 @@
             this.Name = "Zadachi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Задачи";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV1;
         private System.Windows.Forms.DataGridView DGV2;
         private System.Windows.Forms.TextBox TxtOpisZadacha;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtNameZadacha;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtNameResourse;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtNameSotr;
         private MaterialSkin.Controls.MaterialRaisedButton BtnAdd;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnUpdate;
         private MaterialSkin.Controls.MaterialRaisedButton BtnDel;
         private MaterialSkin.Controls.MaterialRaisedButton BtnFreeSotr;
         private MaterialSkin.Controls.MaterialRaisedButton BtnAllSotr;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_sotr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn F_sotr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name_sotr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn O_sotr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dolzhn_sotr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Staj_sotr;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtIdSotr;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_postavl_zadachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TxtIdSotr;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnBack;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_sotr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_sotr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn F_sotr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn O_sotr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dolzhn_sotr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Staj_sotr;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
     }
 }

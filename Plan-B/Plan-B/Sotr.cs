@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 
@@ -36,7 +30,7 @@ namespace Plan_B
         {
             DbConnector dbConnector = new DbConnector();
             DataTable dtbl = new DataTable();
-            dtbl = dbConnector.GetTable("SELECT Id_postavl_zadachi, Name_zadacha, Opis_zadacha, Name_resourse, Data_naznach from Postavl_zadachi INNER JOIN Zadacha on Id_zadacha = Zadacha_ID INNER JOIN Resourse on Id_resourse = Resourse_ID");
+            dtbl = dbConnector.GetTable("SELECT Id_postavl_zadachi, Status_vipoln, Name_zadacha, Opis_zadacha, Name_resourse, Data_naznach from Postavl_zadachi INNER JOIN Zadacha on Id_zadacha = Zadacha_ID INNER JOIN Resourse on Id_resourse = Resourse_ID");
             dgv.DataSource = dtbl;
         }
 
@@ -45,7 +39,16 @@ namespace Plan_B
 
         private void BtnMakeOtchet_Click(object sender, EventArgs e)
         {
-            
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if ((saveFileDialog.OpenFile()) != null)
+                {
+                    
+                }
+            }
+
             var wordApp = new Word.Application();
             wordApp.Visible = false;
 

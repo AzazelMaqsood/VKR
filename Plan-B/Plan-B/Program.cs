@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Plan_B
@@ -16,7 +13,7 @@ namespace Plan_B
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Zadachi());
+            Application.Run(new Sotr());
         }
 
         public static string IsAdmin;

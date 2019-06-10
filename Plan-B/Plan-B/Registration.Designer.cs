@@ -43,11 +43,11 @@
             // btnBack
             // 
             this.btnBack.Depth = 0;
-            this.btnBack.Location = new System.Drawing.Point(46, 532);
+            this.btnBack.Location = new System.Drawing.Point(46, 536);
             this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBack.Name = "btnBack";
             this.btnBack.Primary = true;
-            this.btnBack.Size = new System.Drawing.Size(118, 37);
+            this.btnBack.Size = new System.Drawing.Size(101, 37);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -56,13 +56,13 @@
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(170, 532);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(153, 536);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(184, 37);
+            this.materialRaisedButton2.Size = new System.Drawing.Size(201, 37);
             this.materialRaisedButton2.TabIndex = 19;
-            this.materialRaisedButton2.Text = "Регистрация";
+            this.materialRaisedButton2.Text = "Зарегистрировать";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.MaterialRaisedButton2_Click);
             // 
@@ -158,7 +158,7 @@
             this.txtLogin.Depth = 0;
             this.txtLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtLogin.Hint = "Придумайте логин";
-            this.txtLogin.Location = new System.Drawing.Point(46, 364);
+            this.txtLogin.Location = new System.Drawing.Point(46, 369);
             this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.PasswordChar = '\0';
@@ -175,7 +175,7 @@
             this.txtPass.Depth = 0;
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtPass.Hint = "Придумайте пароль";
-            this.txtPass.Location = new System.Drawing.Point(46, 414);
+            this.txtPass.Location = new System.Drawing.Point(46, 419);
             this.txtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -192,7 +192,7 @@
             this.txtPass2.Depth = 0;
             this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtPass2.Hint = "Повторите пароль";
-            this.txtPass2.Location = new System.Drawing.Point(46, 464);
+            this.txtPass2.Location = new System.Drawing.Point(46, 466);
             this.txtPass2.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.PasswordChar = '*';
@@ -208,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(409, 594);
+            this.ClientSize = new System.Drawing.Size(409, 599);
             this.Controls.Add(this.txtPass2);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtLogin);
@@ -221,9 +221,9 @@
             this.Controls.Add(this.btnBack);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(409, 594);
+            this.MaximumSize = new System.Drawing.Size(409, 599);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(409, 594);
+            this.MinimumSize = new System.Drawing.Size(409, 599);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "                    Регистрация";

@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace Plan_B
 {
     public partial class Admin : MaterialSkin.Controls.MaterialForm
     {
 
-        string IdCurSotr;
+        string NameCurSotr;
+        int IdCurSotr;
         
 
         public Admin()
@@ -65,7 +60,7 @@ namespace Plan_B
                     for (int j = 0; flag && j < dgv.ColumnCount; j++)
                         if (dgv.Rows[i].Cells[j].Value != null)
                         {
-                            if (dgv.Rows[i].Cells[j].Value.ToString().Contains(txtSearch.Text))
+                            if (dgv.Rows[i].Cells[j].Value.ToString().Contains(txtSearch.Text.Trim()))
                             {
                                 dgv.Rows[i].Selected = true;
                                 break;
@@ -84,14 +79,24 @@ namespace Plan_B
 
         private void BtnNaznachDolzhn_Click(object sender, EventArgs e)
         {
-            
-            
+            try
+            {
+                DbConnector dbConnector = new DbConnector();
+                dbConnector.ExecCommand("INSERT Dolzhn (Name_dolzhn, Sotr_ID, Id_dolzhn) VALUES (" + TxtNaznachDolzhn + ", " + IdCurSotr + ", "+0+")");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string IdCurSotr = dgv.CurrentRow.Cells[1].Value.ToString();
-            txtSearch.Text = IdCurSotr;
+            NameCurSotr = dgv.CurrentRow.Cells[1].Value.ToString();
+            IdCurSotr = (int)dgv.CurrentRow.Cells[0].Value;
+            txtSearch.Text = NameCurSotr;
 
         }
     }

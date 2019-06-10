@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using BCrypt.Net;
 using Bcrypt = BCrypt.Net.BCrypt;
-using MaterialSkin;
+
 
 namespace Plan_B
 {
@@ -38,16 +31,15 @@ namespace Plan_B
             try
             {
                 sqlcon.Open();
-                string CPass = Bcrypt.HashPassword(txtPassword.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/");
+                //Шифрование пароля
+                string CPass = Bcrypt.HashPassword(txtPassword.Text, "$2a$11$fhmmGItQBp5ncDeCSnDPG/"); 
+                //Проверка пользователя с таким логином и паролем в базе
                 string query = "SELECT * FROM Sotr WHERE Login_sotr = '" + txtLogin.Text.Trim() + "' and Password_sotr = '" + CPass.Remove(50, 10) + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
-
                 DataTable dtbl = new DataTable();
                 sda.Fill(dtbl);
                 if (dtbl.Rows.Count == 1)
                 {
-                    //TakeLog takeLog = new TakeLog();
-                    //takeLog.takeLogin(txtLogin.Text.Trim());
 
                     Program.IsAdmin = txtLogin.Text.Trim();
                     Main main = new Main();
@@ -72,6 +64,7 @@ namespace Plan_B
 
         private void BtnRegistration_Click(object sender, EventArgs e)
         {
+            //Открытие окна авторизации
             sqlcon.Close();
             Registration rg = new Registration();
             rg.Show();
@@ -80,7 +73,7 @@ namespace Plan_B
 
         private void Auth_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Закрытие приложения
         }
     }
 }
